@@ -2,102 +2,107 @@
 <html lang="pt-br">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Landing Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./styles/style.css"/>
 </head>
 
 <body>
-    <header>
-        <div> 
-            <a href="#">Início </a> <!--tag ancora, envia a gente para outro link-->
+    <header class="menu_container flex">
+        <div class="menu_content"> 
+            <a href="#">Tecnology </a> <!--tag ancora, envia a gente para outro link-->
 
             <nav>
-                <ul>
+                <ul class="menu_lista flex">
                     <li><a href="#">Home</a></li> 
-                    <li><a href="#">Sobre</a></li> 
-                    <li><a href="#">Contato</a></li>  
+                    <li><a href="#Sobre">Sobre</a></li> 
+                    <li><a href="#Contato">Contato</a></li>  
                 </ul> <!--lista não ordenada-->
             </nav> <!--nevegação pelo menu-->
         </div> <!--genérica-->
     </header>  <!--Cabeçalho da página-->
 
     <main> <!--Parte principal da página-->
-        <section> <!--seção-->
+        <section id="Home" class="home_container"> <!--seção-->
 
-            <article> <!--Artigo, parte de uma informação maior-->
+            <article id="home_texto" class="home_content"> <!--Artigo, parte de uma informação maior-->
                 <h4>Bem Vinde! </h4>
                 <h1>Diferentes mundos para diferentes pessoas</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste velit dignissimos rerum aperiam, maxime tempore vitae aspernatur repellat, dolores mollitia, voluptas libero. Cum dolores officiis ipsum doloribus non ea sint.</p>
+                <p>Seja bem vinde ao meu portifólio, se quiser explorar mais sobre os meus trabalhos, clique em "Explore"</p>
 
-                <a target="_blank" href="https://github.com/VitoriaFrancaS">Explore</a>
+                <a class="btn" target="_blank" href="https://github.com/VitoriaFrancaS">Explore</a>
             </article>
 
-            <article>
-                <img src="./assets/alien.svg" alt="alien em uma nave"/>
+            <article id="home-imagem" class="home_content">
+                <img class="home_content_img" src="./assets/world.svg" alt="na imagem mostra dua pessoas em frente ao notebook, um celular ao centro e em cima um mundo conectado a varios detalhes que remetem a comunicação"/>
             </article>
 
         </section> 
 
 
 
-        <section>
+        <section id="Sobre" class="sobre_container">
             <img src="https://avatars.githubusercontent.com/u/146133121?v=4" alt="Foto do perfil do GitHub - Vitória França"/>
 
-            <article> <!--artigo com minhas informações-->
-                <h2>Quem sou eu?</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, totam assumenda nobis beatae qui modi consectetur unde id perferendis consequatur aut magni, vel ea omnis, maiores molestiae? Quas, sapiente quae!</p>
-            </article>
-
-            <article> <!--Artigo com as informações do meu git hub-->
-                <a target="_blank" href="https://github.com/VitoriaFrancaS">GitHub</a>
+            <article id="sobre-texto"> <!--artigo com minhas informações-->
+                <h1>Quem sou eu?</h2>
+                <p>Olá, sou a Vitória tenho 22 anos 🌈. A minha paixão por lego desde a infância  fez com que eu encontrasse na programação uma conexão única, para mim é como se cada programa fosse um lego a ser montado, isso me ajudou a escolher o caminho da programação. A capacidade de criar soluções inovadoras e impactar positivamente o mundo através da tecnologia é o que me motiva diariamente.</p>
+            
+            <div id="sobre-github" class="sobre_github flex"> <!--Artigo com as informações do meu git hub-->
+                <a class="btn" target="_blank" href="https://github.com/VitoriaFrancaS">GitHub</a>
 
                  <p>X seguidores</p>
                 <p>X Repositórios</p>
-            </article>
+            </div>
 
+            </article>
         </section> <!--seção de contato-->
 
-        <section>
+        <section id="Contato" class="contato_container">
 
-            <article> <!--Artigo texto/Rede sociais-->
+            <article id="contato-texto" class="contato_content"> <!--Artigo texto/Rede sociais-->
 
                 <h4>Entre em contato comigo</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore esse quas, totam aliquam similique quos fugit repellat consequatur, delectus maiores perferendis numquam reprehenderit amet illo magni id eius magnam.</p>
-
-                <div> <!--Icones das redes sociais-->
+                
+                <div  class="social_container flex"> <!--Icones das redes sociais-->
                   
                     <a href="" target="_blank">
-                        <img src="./assets/linkedin.svg" alt="Logo da rede social LinkedIn"/>
+                        <img class="social_icon" src="./assets/linkedin.svg" alt="Logo da rede social LinkedIn"/>
                     </a>
                     <a href="" target="_blank">
-                        <img src="./assets/github.svg" alt="Logo do GitHub"/>
+                        <img class="social_icon" src="./assets/github.svg" alt="Logo do GitHub"/>
                     </a>
                 </div>
 
             </article>
 
-            <form action="">
-                <label >Nome:</label>
-                <input type="text" name="Nome" placeholder="Digite o seu nome" required/>
+            <form action="" method="post">
+                <label for="nome" >Nome:</label>
+                <input id="nome" type="text" name="Nome" placeholder="Digite o seu nome" required/>
 
-                <label >Email:</label>
-                <input type="email" name="Email" placeholder="Digite o seu email" required/>
+                <label for="email" >Email:</label>
+                <input id="email" type="email" name="Email" placeholder="Digite o seu email" required/>
 
-                <label >Assunto:</label>
-                <input type="text" name="Assunto" placeholder="Digite o assunto da mensagem" required/>
+                <label for="assunto">Assunto:</label>
+                <input id="assunto" type="text" name="Assunto" placeholder="Digite o assunto da mensagem" required/>
 
-                <label>Mensagem:</label>
-                <textarea name="mensagem" placeholder="Digite a sua mensagem" required></textarea>
+                <label for="messagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem" required></textarea>
 
-                <button type="submit">Enviar</button>
+                <button class="btn" type="submit">Enviar</button>
             </form>
             
 
         </section>
     </main>
 
-    <footer> <!--Rodapé da página-->
+    <footer class="flex"> <!--Rodapé da página-->
         Projeto feito com 😡 por Vitória França - 2024  <!--atalho para emoji windows + .-->
     </footer>
 

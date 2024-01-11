@@ -1,0 +1,301 @@
+/* Resetando as configurações padrões do CSS */
+* { /*Representa todas as tags do CSS*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400; /*define o tipo de tamanho que a nossa fonta vai ter*/
+    outline: none; /*tirar a borda exterior*/
+
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{ /*pseudo classe representação de um elemento que vai ser adicionado ao código*/
+    --purple-200: #9a7bd1;
+    --purple-500: #6b36c8;
+    --purple-800: #441f88;
+
+    --black-800: #171717;
+
+    --gray-200: #cccccc;
+    --gray-400: #505861;
+
+    --white: #F9F9F9;
+}
+
+html {
+    height: 100vh; /* Definindo a altura padrão da tela */
+    scroll-behavior: smooth; /*comportamento do scrool, para descer as páginas de maneira suave*/
+}
+
+body{
+    background-color: var(--black-800);
+    color: var(--white);
+}
+
+body::-webkit-scrollbar {
+    /* largura da Scrollbar */
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    /* cor do plano de fundo da Scrollbar */
+    background: var(--black-800);
+}
+
+body::-webkit-scrollbar-thumb {
+    /* cor do scroll */
+    background-color: var(--purple-500);
+
+    /* borda do scroll */
+    border-radius: 20px;
+}
+
+button, a{
+    cursor: pointer;
+}
+
+/* Classe Padrão para todos os Botões */
+.btn {
+    text-align: center;
+    padding: 12px 32px;
+    background: none;
+    border: 1px solid var(--purple-500);
+
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.btn:hover{ 
+    background: var(--purple-500);
+}
+
+.flex{
+    display: flex; /* os itens iram ficar alinhado um do lado do outro*/
+    /* Eixo horizontal */
+    justify-content: center;
+    /* Eixo vertical */
+    align-items: center;
+}
+
+.flex-column {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu_container {
+    height: 80px;
+    position: sticky; /*permite que o menu fique preso na parte superior e acompanhar a nossa tela enquanto navegamos pela pág */
+    top: 0; 
+    width: 100%;
+    background-color: var(--black-800);
+    border-bottom: 1px solid var(--purple-500);
+    filter: opacity(0.9);
+}
+
+.menu_container a {
+    font-size: 16px;
+    color: var(--purple-200);
+    font-weight: bold;
+}
+.menu_container a:hover {
+    color: var(--purple-500);
+}
+
+.menu_content {
+    max-width: 1120px; /*tamanho máximo do menu*/
+    padding: 0 24px; /*espaçamento interno no conteudo da borda*/
+    width: 100%; /**/
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.menu_lista {
+    list-style: none; /*retira o estilo padrão das lista*/
+    text-align: center;
+}
+
+/* Vai alterar todas as tags <li>, obrigatoriamente, dentro da class menu lista */
+.menu_lista li {
+    margin: 0 0 0 16px; /*pensa em um relógio que roda no sentido horário 0=meia noite, 0= três hora, 0= seis horas, 16= nove horas*/
+}
+
+.home_container {
+    max-width: 1120px;
+    /*Definir espaçamento externo de 16px em cima e embaixo, e automatico na laterias*/
+    margin: 16px auto;
+
+     /* definindo espaçamento interno de 0px acima e abaixo, e 16px nas laterais */
+    padding: 0 16px;
+
+    /*Fazendo um calculo, pega a tela visivel do usuário, e subtrai 100px, devido ao tamanho do menu  */
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center; /*alinhamento horizontal*/
+    align-items: center; /*alinhamento vertical*/
+}
+
+.home_container p,
+h1,
+h4 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.home_container h4 {
+    font-weight: bold;
+    margin:16px 0;
+}
+
+.home_container h1 {
+    font-size: 36px;
+    line-height: 48px; /*definindo o tamanho da linha*/
+    font-weight: bold;
+}
+
+.home_container p {
+    margin: 16px 0;
+}
+
+.home_container .btn {
+    width: 40%; /*o botão terá 40% da largura do container/elemento/tag que envolve o .home_container*/
+}
+
+.home_content {
+    width: 50vw;  /* o conteudo será mostrado utilizando metada da tela visivel do usuario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home_content_img {
+    display: flex;
+    width: 75%;  /* terá 75% da largura da imagem. Se a img possui uma largura de 500px, ela será exibida com 375px */
+}
+
+.sobre_container {
+    max-width: 1120px;
+    margin: -24px auto; /* queremos fazer uma margin inversa, ou seja, que o sobre fique um pouco acima da tag anterior */
+    padding: 0 16px;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+
+.sobre_container img {
+    display: flex;
+    width: 35%;
+    border: 5px solid var(--purple-500);
+    border-radius: 50%;
+}
+
+.sobre_container h1 {
+    font-size: 32px;
+    text-align: center;
+    line-height: 48px;
+    font-weight: bold;
+}
+
+.sobre_container p {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.sobre_github {
+    justify-content: space-evenly; /* os elementos terão um espaço entre eles, e entre as bordas do container */
+}
+
+.contato_container {
+    max-width: 1120px;
+    margin: 64px auto 32px;
+    padding: 0 32px;
+
+    display: grid;  /* modo de organização de elementos em Grade - Colunas e Linhas - parecido com uma tabela*/
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, 518px); /* defininos as colunas do Grid/Grade com uma largura mínima de 518 pixels, preenchendo automaticamente o espaço disponível. */ 
+    gap: 20px; /* espaçamento acima, abaixo, e nas laterais usado no display grid, para dar espaço aos elementos */
+}
+
+.contato_container h4 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+.contato_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 64px 0 0 0;
+    font-size: 20px;
+}
+
+.contato_content {
+    display: block;
+    text-align: justify;
+}
+
+.social_container {
+    display: flex;
+    justify-content: space-evenly;  /* os elementos terão um espaço entre eles, e entre as bordas do container */
+    margin: 32px 0 0 0;
+    width: 320px;
+   
+}
+
+.social_icon {
+    width: 75px;
+    height: 75px;
+    filter: invert(); /* Invertemos a cor natural dos icones, de branco para preto */
+ 
+}
+
+.social_icon:hover {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(31%) saturate(5190%) hue-rotate(249deg) brightness(79%) contrast(99%) ;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+
+    margin: 112px 0 0 0;
+    padding: 24px;
+    border: none;
+}
+
+form label {
+    font-size: 20px;
+    text-align: left;
+}
+
+form input, textarea {
+    margin: 8px 0 16px;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;  /* impedimos que o Textarea seja aumentado ou diminuido pelo usuário*/
+}
+
+footer {
+    margin: 0;
+    padding: 32px;
+    color: var(--white);
+    background-color: var(--purple-500);
+    filter: opacity(0.9);
+    font-weight: bold;
+}
